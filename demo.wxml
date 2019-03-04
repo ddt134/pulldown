@@ -1,0 +1,16 @@
+<view class="pullDownWrap" animation="{{pullDownAnimation}}">
+    <view class="xiala">
+        <image src="./timg.gif" style="width:50rpx;height:50rpx; margin-top: 15rpx;"></image>
+        释放刷新…
+    </view>
+    <view class='xlshijian'>{{pullDownTime}}</view>
+</view>
+<view class='warp'>
+    <scroll-view scroll-y="true" style="height:{{scrollHeight}}px" bindscrolltolower="scrolltolower">
+        <view id="scrollContent" style="height:{{scrollHeight+1}}px" bindtouchmove="touchmove" bindtouchend="touchend">
+            <block wx:if="{{list.length>0}}" wx:for="{{list}}" wx:key="unique">
+                <!--列表内容-->
+            </block>
+        </view>
+    </scroll-view>
+</view>
